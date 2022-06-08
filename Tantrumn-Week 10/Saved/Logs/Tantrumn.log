@@ -2353,3 +2353,80 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.08-03.45.16:926][624]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
 [2022.06.08-03.45.16:928][624]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
 [2022.06.08-03.45.16:968][626]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2022.06.08-03.48.50:907][911]LogUObjectHash: Compacting FUObjectHashTables data took   4.36ms
+[2022.06.08-03.48.50:937][911]LogLinker: Warning: Asset 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Maps/Playground_KinematicsLocalMP.umap' has been saved with empty engine version. The asset will be loaded but may be incompatible.
+[2022.06.08-03.48.50:940][911]LogLinker: Warning: Asset 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/Cameras/BP_TantrumnLocalMPCamera.uasset' has been saved with empty engine version. The asset will be loaded but may be incompatible.
+[2022.06.08-03.48.50:963][911]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Tantrumn/Maps/Playground_KinematicsLocalMP.Playground_KinematicsLocalMP
+[2022.06.08-03.48.50:963][911]Cmd: MAP LOAD FILE="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Maps/Playground_KinematicsLocalMP.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2022.06.08-03.48.50:963][911]LightingResults: New page: Lighting Build
+[2022.06.08-03.48.50:964][911]LoadErrors: New page: Loading map: Playground_KinematicsLocalMP.umap
+[2022.06.08-03.48.50:997][911]LogWorld: UWorld::CleanupWorld for Playground_GameloopMP_Split, bSessionEnded=true, bCleanupResources=true
+[2022.06.08-03.48.50:998][911]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.48.50:998][911]MapCheck: New page: Map Check
+[2022.06.08-03.48.50:998][911]LightingResults: New page: Lighting Build
+[2022.06.08-03.48.51:012][911]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.06.08-03.48.51:020][911]LogUObjectHash: Compacting FUObjectHashTables data took   2.69ms
+[2022.06.08-03.48.51:021][911]LogAudio: Display: Audio Device (ID: 1) registered with world 'Playground_KinematicsLocalMP'.
+[2022.06.08-03.48.51:056][911]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2022.06.08-03.48.51:056][911]LogAIModule: Creating AISystem for world Playground_KinematicsLocalMP
+[2022.06.08-03.48.51:073][911]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2022.06.08-03.48.51:076][911]Cmd: MAP CHECKDEP NOCLEARLOG
+[2022.06.08-03.48.51:076][911]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.088ms to complete.
+[2022.06.08-03.48.51:076][911]LogFileHelpers: Loading map 'Playground_KinematicsLocalMP' took 0.114
+[2022.06.08-03.48.53:954][238]LogTemp: Repeating last play command: Selected Viewport
+[2022.06.08-03.48.53:959][238]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.06.08-03.48.53:959][238]PIE: New page: PIE session: Playground_KinematicsLocalMP (Jun 7, 2022, 3:48:53 PM)
+[2022.06.08-03.48.53:996][238]LogPlayLevel: Creating play world package: /Game/Tantrumn/Maps/UEDPIE_0_Playground_KinematicsLocalMP
+[2022.06.08-03.48.53:999][238]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003255s)
+[2022.06.08-03.48.54:000][238]LogAIModule: Creating AISystem for world Playground_KinematicsLocalMP
+[2022.06.08-03.48.54:000][238]LogPlayLevel: PIE: World Init took: (0.000993s)
+[2022.06.08-03.48.54:000][238]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Tantrumn/Maps/Playground_KinematicsLocalMP.Playground_KinematicsLocalMP to /Game/Tantrumn/Maps/UEDPIE_0_Playground_KinematicsLocalMP.Playground_KinematicsLocalMP (0.004532s)
+[2022.06.08-03.48.54:014][238]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2022.06.08-03.48.54:016][238]LogAudio: Display: Creating Audio Device:                 Id: 16, Scope: Unique, Realtime: True
+[2022.06.08-03.48.54:016][238]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.06.08-03.48.54:016][238]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.06.08-03.48.54:016][238]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.06.08-03.48.54:017][238]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.06.08-03.48.54:017][238]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.06.08-03.48.54:017][238]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.06.08-03.48.54:017][238]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.06.08-03.48.54:017][238]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.06.08-03.48.54:017][238]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.06.08-03.48.54:017][238]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.06.08-03.48.54:017][238]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.06.08-03.48.54:017][238]LogAudioMixer: Display: Initializing audio mixer.
+[2022.06.08-03.48.54:020][238]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-03.48.54:020][238]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-03.48.54:028][238]LogAudioMixer: Display: Using Audio Device Headphones (Bose Color SoundLink)
+[2022.06.08-03.48.54:030][238]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.06.08-03.48.54:030][238]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.06.08-03.48.54:030][238]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.06.08-03.48.54:031][238]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.06.08-03.48.54:031][238]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.06.08-03.48.54:031][238]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.06.08-03.48.54:033][238]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.06.08-03.48.54:033][238]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.06.08-03.48.54:033][238]LogInit: FAudioDevice initialized.
+[2022.06.08-03.48.54:033][238]LogAudio: Display: Audio Device (ID: 16) registered with world 'Playground_KinematicsLocalMP'.
+[2022.06.08-03.48.54:043][238]LogLoad: Game class is 'BP_TantrumnGameModeBase_C'
+[2022.06.08-03.48.54:044][238]LogWorld: Bringing World /Game/Tantrumn/Maps/UEDPIE_0_Playground_KinematicsLocalMP.Playground_KinematicsLocalMP up for play (max tick rate 0) at 2022.06.07-21.48.54
+[2022.06.08-03.48.54:045][238]LogWorld: Bringing up level for play took: 0.001434
+[2022.06.08-03.48.54:045][238]LogOnline: OSS: Creating online subsystem instance for: :Context_23
+[2022.06.08-03.48.54:049][238]LogTemp: Warning: OnPossess: BP_TantrumnPlayerController_C_0
+[2022.06.08-03.48.54:053][238]LogTemp: Warning: OnPossess: BP_TantrumnPlayerController_C_1
+[2022.06.08-03.48.54:054][238]PIE: Server logged in
+[2022.06.08-03.48.54:054][238]PIE: Play in editor total start time 0.096 seconds.
+[2022.06.08-03.48.56:959][579]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2022.06.08-03.49.34:476][ 18]LogTemp: Warning: OnUnPossess: BP_TantrumnPlayerController_C_1
+[2022.06.08-03.49.34:476][ 18]LogTemp: Warning: OnUnPossess: BP_TantrumnPlayerController_C_0
+[2022.06.08-03.49.34:476][ 18]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.08-03.49.34:476][ 18]LogWorld: BeginTearingDown for /Game/Tantrumn/Maps/UEDPIE_0_Playground_KinematicsLocalMP
+[2022.06.08-03.49.34:476][ 18]LogWorld: UWorld::CleanupWorld for Playground_KinematicsLocalMP, bSessionEnded=true, bCleanupResources=true
+[2022.06.08-03.49.34:477][ 18]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.49.34:484][ 18]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.06.08-03.49.34:489][ 18]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.49.34:502][ 18]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.08-03.49.34:502][ 18]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.08-03.49.34:504][ 18]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.08-03.49.34:509][ 18]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2022.06.08-03.49.34:555][ 20]LogPlayLevel: Display: Destroying online subsystem :Context_23
