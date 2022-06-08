@@ -2113,3 +2113,75 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.08-03.19.58:075][271]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2022.06.08-03.19.58:084][271]LogUObjectHash: Compacting FUObjectHashTables data took   3.55ms
 [2022.06.08-03.19.58:112][272]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2022.06.08-03.21.43:275][811]LogUObjectHash: Compacting FUObjectHashTables data took   3.68ms
+[2022.06.08-03.21.43:328][811]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Tantrumn/Maps/Playground_Kinematics.Playground_Kinematics
+[2022.06.08-03.21.43:329][811]Cmd: MAP LOAD FILE="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Maps/Playground_Kinematics.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2022.06.08-03.21.43:329][811]LightingResults: New page: Lighting Build
+[2022.06.08-03.21.43:329][811]LoadErrors: New page: Loading map: Playground_Kinematics.umap
+[2022.06.08-03.21.43:355][811]LogWorld: UWorld::CleanupWorld for Playground_OnlineRace, bSessionEnded=true, bCleanupResources=true
+[2022.06.08-03.21.43:356][811]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.21.43:356][811]MapCheck: New page: Map Check
+[2022.06.08-03.21.43:356][811]LightingResults: New page: Lighting Build
+[2022.06.08-03.21.43:369][811]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.06.08-03.21.43:376][811]LogUObjectHash: Compacting FUObjectHashTables data took   2.01ms
+[2022.06.08-03.21.43:377][811]LogAudio: Display: Audio Device (ID: 1) registered with world 'Playground_Kinematics'.
+[2022.06.08-03.21.43:475][811]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2022.06.08-03.21.43:475][811]LogAIModule: Creating AISystem for world Playground_Kinematics
+[2022.06.08-03.21.43:490][811]LogUObjectHash: Compacting FUObjectHashTables data took   1.54ms
+[2022.06.08-03.21.43:493][811]Cmd: MAP CHECKDEP NOCLEARLOG
+[2022.06.08-03.21.43:494][811]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.073ms to complete.
+[2022.06.08-03.21.43:494][811]LogFileHelpers: Loading map 'Playground_Kinematics' took 0.165
+[2022.06.08-03.21.45:147][908]LogTemp: Repeating last play command: Selected Viewport
+[2022.06.08-03.21.45:152][908]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.06.08-03.21.45:152][908]PIE: New page: PIE session: Playground_Kinematics (Jun 7, 2022, 3:21:45 PM)
+[2022.06.08-03.21.45:153][908]LogPlayLevel: Creating play world package: /Game/Tantrumn/Maps/UEDPIE_0_Playground_Kinematics
+[2022.06.08-03.21.45:160][908]LogPlayLevel: PIE: StaticDuplicateObject took: (0.007200s)
+[2022.06.08-03.21.45:162][908]LogAIModule: Creating AISystem for world Playground_Kinematics
+[2022.06.08-03.21.45:162][908]LogPlayLevel: PIE: World Init took: (0.001884s)
+[2022.06.08-03.21.45:162][908]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Tantrumn/Maps/Playground_Kinematics.Playground_Kinematics to /Game/Tantrumn/Maps/UEDPIE_0_Playground_Kinematics.Playground_Kinematics (0.009322s)
+[2022.06.08-03.21.45:186][908]LogUObjectHash: Compacting FUObjectHashTables data took   3.25ms
+[2022.06.08-03.21.45:187][908]LogAudio: Display: Creating Audio Device:                 Id: 13, Scope: Unique, Realtime: True
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.06.08-03.21.45:187][908]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.06.08-03.21.45:187][908]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.06.08-03.21.45:188][908]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.06.08-03.21.45:188][908]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.06.08-03.21.45:188][908]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.06.08-03.21.45:188][908]LogAudioMixer: Display: Initializing audio mixer.
+[2022.06.08-03.21.45:191][908]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-03.21.45:191][908]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-03.21.45:457][908]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2022.06.08-03.21.45:458][908]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.06.08-03.21.45:458][908]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.06.08-03.21.45:458][908]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.06.08-03.21.45:459][908]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.06.08-03.21.45:459][908]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.06.08-03.21.45:459][908]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.06.08-03.21.45:462][908]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.06.08-03.21.45:462][908]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.06.08-03.21.45:462][908]LogInit: FAudioDevice initialized.
+[2022.06.08-03.21.45:462][908]LogAudio: Display: Audio Device (ID: 13) registered with world 'Playground_Kinematics'.
+[2022.06.08-03.21.45:474][908]LogLoad: Game class is 'BP_TantrumnGameModeBase_C'
+[2022.06.08-03.21.45:476][908]LogWorld: Bringing World /Game/Tantrumn/Maps/UEDPIE_0_Playground_Kinematics.Playground_Kinematics up for play (max tick rate 60) at 2022.06.07-21.21.45
+[2022.06.08-03.21.45:476][908]LogWorld: Bringing up level for play took: 0.001259
+[2022.06.08-03.21.45:477][908]LogOnline: OSS: Creating online subsystem instance for: :Context_18
+[2022.06.08-03.21.45:482][908]LogTemp: Warning: OnPossess: BP_TantrumnPlayerController_C_0
+[2022.06.08-03.21.45:483][908]PIE: Server logged in
+[2022.06.08-03.21.45:483][908]PIE: Play in editor total start time 0.332 seconds.
+[2022.06.08-03.21.47:044][  0]LogTemp: Warning: OnUnPossess: BP_TantrumnPlayerController_C_0
+[2022.06.08-03.21.47:045][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.08-03.21.47:045][  0]LogWorld: BeginTearingDown for /Game/Tantrumn/Maps/UEDPIE_0_Playground_Kinematics
+[2022.06.08-03.21.47:045][  0]LogWorld: UWorld::CleanupWorld for Playground_Kinematics, bSessionEnded=true, bCleanupResources=true
+[2022.06.08-03.21.47:045][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.21.47:051][  0]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.06.08-03.21.47:054][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.21.47:067][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.08-03.21.47:068][  0]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.08-03.21.47:069][  0]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.08-03.21.47:074][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2022.06.08-03.21.47:121][  3]LogPlayLevel: Display: Destroying online subsystem :Context_18
