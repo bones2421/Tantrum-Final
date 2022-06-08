@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Tantrumn",
+			"Path": "D:\\Unreal Projects\\Tantrum-Final\\Tantrumn-Week 10\\Source\\Tantrumn.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TantrumnEditor",
+			"Path": "D:\\Unreal Projects\\Tantrum-Final\\Tantrumn-Week 10\\Source\\TantrumnEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

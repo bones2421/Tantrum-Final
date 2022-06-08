@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Tantrumn.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{5ECBA7FE-20C1-4A11-8204-D11CB5474262}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Tantrumn.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TantrumnEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Launch.bat" />
+    <None Include="..\..\LaunchListenServer.bat" />
+    <None Include="..\..\LaunchMap.bat" />
+    <None Include="..\..\LaunchServer.bat" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{1612045A-14E6-4E99-ADFA-0E432BA58A1C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Tantrumn">
+      <UniqueIdentifier>{0D3D7923-949B-44D0-90A9-7E13B1D934E7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Tantrumn\InteractInterface.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\InteractInterface.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Tantrumn\Tantrumn.Build.cs">
+      <Filter>Source\Tantrumn</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Tantrumn\Tantrumn.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\Tantrumn.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnCharacterBase.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnCharacterBase.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnGameInstance.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnGameInstance.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnGameModeBase.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnGameModeBase.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnGameStateBase.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnGameStateBase.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnGameWidget.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnGameWidget.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnLevelEndTrigger.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnLevelEndTrigger.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnLocalMPCamera.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnLocalMPCamera.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnPlayerController.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnPlayerController.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnPlayerState.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnPlayerState.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\ThrowableActor.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\ThrowableActor.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
