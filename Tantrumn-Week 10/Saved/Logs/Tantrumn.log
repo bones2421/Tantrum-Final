@@ -2003,3 +2003,58 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.08-03.16.33:314][825]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2022.06.08-03.16.33:323][825]LogUObjectHash: Compacting FUObjectHashTables data took   3.31ms
 [2022.06.08-03.16.33:353][826]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2022.06.08-03.17.14:551][175]LogTemp: Repeating last play command: Selected Viewport
+[2022.06.08-03.17.14:555][175]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.06.08-03.17.14:555][175]PIE: New page: PIE session: Playground_OnlineRace (Jun 7, 2022, 3:17:14 PM)
+[2022.06.08-03.17.14:555][175]LogPlayLevel: Creating play world package: /Game/Tantrumn/Maps/UEDPIE_0_Playground_OnlineRace
+[2022.06.08-03.17.14:560][175]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004851s)
+[2022.06.08-03.17.14:561][175]LogAIModule: Creating AISystem for world Playground_OnlineRace
+[2022.06.08-03.17.14:562][175]LogPlayLevel: PIE: World Init took: (0.001372s)
+[2022.06.08-03.17.14:562][175]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Tantrumn/Maps/Playground_OnlineRace.Playground_OnlineRace to /Game/Tantrumn/Maps/UEDPIE_0_Playground_OnlineRace.Playground_OnlineRace (0.006376s)
+[2022.06.08-03.17.14:575][175]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2022.06.08-03.17.14:576][175]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.06.08-03.17.14:576][175]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.06.08-03.17.14:576][175]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.06.08-03.17.14:577][175]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.06.08-03.17.14:577][175]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.06.08-03.17.14:577][175]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.06.08-03.17.14:577][175]LogAudioMixer: Display: Initializing audio mixer.
+[2022.06.08-03.17.14:579][175]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-03.17.14:579][175]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-03.17.14:822][175]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2022.06.08-03.17.14:823][175]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.06.08-03.17.14:823][175]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.06.08-03.17.14:823][175]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.06.08-03.17.14:824][175]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.06.08-03.17.14:824][175]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.06.08-03.17.14:824][175]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.06.08-03.17.14:825][175]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.06.08-03.17.14:825][175]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.06.08-03.17.14:825][175]LogInit: FAudioDevice initialized.
+[2022.06.08-03.17.14:825][175]LogAudio: Display: Audio Device (ID: 11) registered with world 'Playground_OnlineRace'.
+[2022.06.08-03.17.14:832][175]LogLoad: Game class is 'BP_TantrumnGameModeBase_C'
+[2022.06.08-03.17.14:833][175]LogWorld: Bringing World /Game/Tantrumn/Maps/UEDPIE_0_Playground_OnlineRace.Playground_OnlineRace up for play (max tick rate 60) at 2022.06.07-21.17.14
+[2022.06.08-03.17.14:833][175]LogWorld: Bringing up level for play took: 0.000674
+[2022.06.08-03.17.14:834][175]LogOnline: OSS: Creating online subsystem instance for: :Context_16
+[2022.06.08-03.17.14:837][175]LogTemp: Warning: OnPossess: BP_TantrumnPlayerController_C_0
+[2022.06.08-03.17.14:837][175]PIE: Server logged in
+[2022.06.08-03.17.14:838][175]PIE: Play in editor total start time 0.283 seconds.
+[2022.06.08-03.17.17:553][338]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2022.06.08-03.17.20:260][499]LogTemp: Warning: OnUnPossess: BP_TantrumnPlayerController_C_0
+[2022.06.08-03.17.20:260][499]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.08-03.17.20:260][499]LogWorld: BeginTearingDown for /Game/Tantrumn/Maps/UEDPIE_0_Playground_OnlineRace
+[2022.06.08-03.17.20:261][499]LogWorld: UWorld::CleanupWorld for Playground_OnlineRace, bSessionEnded=true, bCleanupResources=true
+[2022.06.08-03.17.20:261][499]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.17.20:273][499]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.06.08-03.17.20:285][499]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.08-03.17.20:300][499]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.08-03.17.20:301][499]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.08-03.17.20:302][499]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.08-03.17.20:312][499]LogUObjectHash: Compacting FUObjectHashTables data took   3.38ms
+[2022.06.08-03.17.20:338][500]LogPlayLevel: Display: Destroying online subsystem :Context_16
