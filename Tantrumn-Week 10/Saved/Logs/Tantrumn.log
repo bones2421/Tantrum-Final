@@ -2430,3 +2430,62 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.08-03.49.34:504][ 18]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2022.06.08-03.49.34:509][ 18]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
 [2022.06.08-03.49.34:555][ 20]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2022.06.08-05.10.32:569][152]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.08-05.10.32:577][152]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-05.10.32:577][152]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-06.18.54:325][155]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.08-06.18.55:827][155]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-06.18.55:827][155]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-06.18.57:689][156]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.08-06.18.57:713][156]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-06.18.57:713][156]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-06.18.59:229][157]LogHttp: Warning: 000002551A258800: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2022.06.08-06.18.59:230][157]LogHttp: Warning: 000002551A258800: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2022.06.08-06.18.59:230][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x2548910beb0 [can pipeline])
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 1 (Re-using existing connection! (#0) with host datarouter.ol.epicgames.com)
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.196.203.96) port 443 (#0))
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 3 (We are completely uploaded and fine)
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2022.06.08-06.18.59:231][157]LogHttp: Warning: 000002551A258800: libcurl info message cache 7 (Closing connection 0)
+[2022.06.08-06.18.59:246][157]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.08-06.18.59:260][157]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.08-06.18.59:260][157]LogAudioMixer: Display: 1: FrontRight
+[2022.06.08-06.19.00:181][158]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2022.06.08-06.19.04:883][172]LogUdpMessaging: Warning: UDP messaging encountered an error. Auto repair routine started for reinitialization
+[2022.06.08-06.19.05:218][173]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.02:691][173]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2022.06.09-03.28.02:699][173]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.02:700][173]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.08:077][174]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.08:136][174]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.08:136][174]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.12:231][175]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.12:262][175]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.12:262][175]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.15:430][176]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.15:460][176]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.15:460][176]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.17:692][177]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.17:713][177]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.17:714][177]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.19:565][178]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.19:586][178]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.19:586][178]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.21:173][179]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.21:187][179]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.21:187][179]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.22:564][180]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.22:581][180]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.22:582][180]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.24:009][181]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.24:025][181]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.24:025][181]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.28.25:260][182]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.28.25:270][182]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.28.25:270][182]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-03.30.43:173][607]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{2d1ae795-6bc0-4c01-ab1a-c27e35173a1b}.
+[2022.06.09-03.30.43:173][607]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.09-03.30.43:187][607]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-03.30.43:188][607]LogAudioMixer: Display: 1: FrontRight
