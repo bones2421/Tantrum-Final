@@ -4516,3 +4516,85 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.10-03.23.22:869][329]LogSavePackage: Moving 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Saved/Playground_KinematicsLocalMP09640C784DA1B4BD71CE1492885FA105.tmp' to 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Maps/Playground_KinematicsLocalMP.umap'
 [2022.06.10-03.23.22:891][329]AssetCheck: New page: Asset Save: Playground_KinematicsLocalMP
 [2022.06.10-03.23.22:891][329]LogContentValidation: Display: Validating World /Game/Tantrumn/Maps/Playground_KinematicsLocalMP.Playground_KinematicsLocalMP
+[2022.06.10-03.50.51:734][401]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.10-03.50.51:869][401]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.10-03.50.51:873][401]LogAudioMixer: Display: 1: FrontRight
+[2022.06.10-03.50.56:825][416]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.10-03.50.56:831][416]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.10-03.50.56:832][416]LogAudioMixer: Display: 1: FrontRight
+[2022.06.10-13.59.00:737][429]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{924207a8-adf2-4fee-ad79-cc6b58d8881a}.
+[2022.06.10-13.59.00:737][429]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.10-13.59.04:662][429]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.10-13.59.04:662][429]LogAudioMixer: Display: 1: FrontRight
+[2022.06.10-13.59.06:222][430]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.10-13.59.06:241][430]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.10-13.59.06:241][430]LogAudioMixer: Display: 1: FrontRight
+[2022.06.10-13.59.07:430][431]LogHttp: Warning: 0000025553ACB900: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2022.06.10-13.59.07:430][431]LogHttp: Warning: 0000025553ACB900: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2022.06.10-13.59.07:430][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x2548910ac20 [can pipeline])
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 1 (Re-using existing connection! (#7) with host datarouter.ol.epicgames.com)
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (174.129.25.67) port 443 (#7))
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 3 (We are completely uploaded and fine)
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2022.06.10-13.59.07:431][431]LogHttp: Warning: 0000025553ACB900: libcurl info message cache 7 (Closing connection 7)
+[2022.06.10-13.59.07:441][431]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.10-13.59.07:453][431]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.10-13.59.07:453][431]LogAudioMixer: Display: 1: FrontRight
+[2022.06.10-13.59.08:242][432]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2022.06.10-13.59.52:065][562]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.10-13.59.52:077][562]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.10-13.59.52:077][562]LogAudioMixer: Display: 1: FrontRight
+[2022.06.10-13.59.57:074][576]LogUdpMessaging: Warning: UDP messaging encountered an error. Auto repair routine started for reinitialization
+[2022.06.11-00.13.20:966][578]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.13.22:429][578]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.13.22:429][578]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.13.24:516][579]LogUdpMessaging: Warning: UDP messaging encountered an error. Auto repair routine started for reinitialization
+[2022.06.11-00.13.24:521][579]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.13.24:542][579]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.13.24:543][579]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.13.26:840][580]LogHttp: Warning: 000002553AFA2400: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2022.06.11-00.13.26:841][580]LogHttp: Warning: 000002553AFA2400: request failed, libcurl error: 6 (Couldn't resolve host name)
+[2022.06.11-00.13.26:841][580]LogHttp: Warning: 000002553AFA2400: libcurl info message cache 0 (Could not resolve host: datarouter.ol.epicgames.com)
+[2022.06.11-00.13.26:841][580]LogHttp: Warning: 000002553AFA2400: libcurl info message cache 1 (Closing connection 8)
+[2022.06.11-00.13.26:841][580]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2022.06.11-00.13.26:851][580]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.13.26:873][580]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.13.26:873][580]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.13.28:752][581]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.13.28:763][581]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.13.28:763][581]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.19.06:116][584]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.19.06:129][584]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.19.06:129][584]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.19.07:171][585]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.19.07:186][585]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.19.07:186][585]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.47.53:159][611]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.47.53:165][611]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.47.53:165][611]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.49.25:456][626]LogHttp: Warning: 000002553AFA0800: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x25489108700 [can pipeline])
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 1 (Re-using existing connection! (#10) with host datarouter.ol.epicgames.com)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (35.168.203.46) port 443 (#10))
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 3 (We are completely uploaded and fine)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: 000002553AFA0800: libcurl info message cache 7 (Closing connection 10)
+[2022.06.11-00.49.25:457][626]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B66C46C9E-45A6-0273-E9C4-CE85AAD6F468%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=06fa4a294002bb773c589aa700ee1f37%7C847b3337cc7d4a37bce4ca5544bcd925%7Ca8be9ace-a568-4119-875e-3c9ee13e2993&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2022.06.11-00.49.26:454][628]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.11-00.49.26:461][628]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.11-00.49.26:461][628]LogAudioMixer: Display: 1: FrontRight
+[2022.06.11-00.49.45:222][684]LogUdpMessaging: Warning: UDP messaging encountered an error. Auto repair routine started for reinitialization
+[2022.06.12-03.29.08:500][685]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.12-03.29.08:532][685]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.12-03.29.08:532][685]LogAudioMixer: Display: 1: FrontRight
+[2022.06.12-03.29.11:205][686]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.12-03.29.11:524][686]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.12-03.29.11:524][686]LogAudioMixer: Display: 1: FrontRight
+[2022.06.12-03.29.12:885][687]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.12-03.29.12:896][687]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.12-03.29.12:897][687]LogAudioMixer: Display: 1: FrontRight
