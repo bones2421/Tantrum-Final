@@ -4598,3 +4598,142 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.12-03.29.12:885][687]LogAudioMixer: Resetting audio stream to device id 
 [2022.06.12-03.29.12:896][687]LogAudioMixer: Display: 0: FrontLeft
 [2022.06.12-03.29.12:897][687]LogAudioMixer: Display: 1: FrontRight
+[2022.06.12-03.32.27:229][257]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{2d1ae795-6bc0-4c01-ab1a-c27e35173a1b}.
+[2022.06.12-03.32.27:229][257]LogAudioMixer: Resetting audio stream to device id 
+[2022.06.12-03.32.27:252][257]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.12-03.32.27:252][257]LogAudioMixer: Display: 1: FrontRight
+[2022.06.12-03.34.19:128][414]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Tantrumn/Blueprints/Characters/BP_Player.BP_Player
+[2022.06.12-03.34.31:871][972]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.06.12-03.34.31:924][972]LogEditorClassViewer: Warning: Class /Engine/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Blutility.IWBE_Blutility_C has parent /Script/Blutility.PlacedEditorUtilityBase, but this parent is not found. The Class will not be shown in ClassViewer.
+[2022.06.12-03.35.02:031][576]BlueprintLog: New page: Compile BP_Player
+[2022.06.12-03.35.02:209][576]LogUObjectHash: Compacting FUObjectHashTables data took  12.48ms
+[2022.06.12-03.35.09:631][882]BlueprintLog: New page: Compile BP_Player
+[2022.06.12-03.35.09:741][882]LogUObjectHash: Compacting FUObjectHashTables data took   6.15ms
+[2022.06.12-03.35.09:843][882]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Tantrumn/Blueprints/Characters/BP_Player" FILE="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/Characters/BP_Player.uasset" SILENT=true
+[2022.06.12-03.35.09:926][882]LogSavePackage: Moving 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Saved/BP_PlayerB579147A4BC791CB650312B75F915BE3.tmp' to 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/Characters/BP_Player.uasset'
+[2022.06.12-03.35.09:950][882]AssetCheck: New page: Asset Save: BP_Player
+[2022.06.12-03.35.09:950][882]LogContentValidation: Display: Validating Blueprint /Game/Tantrumn/Blueprints/Characters/BP_Player.BP_Player
+[2022.06.12-03.39.23:881][556]LogEditorClassViewer: Warning: Class /Engine/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Blutility.IWBE_Blutility_C has parent /Script/Blutility.PlacedEditorUtilityBase, but this parent is not found. The Class will not be shown in ClassViewer.
+[2022.06.12-03.39.23:885][556]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2022.06.12-03.39.42:553][933]Running C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Tantrumn.uproject" -game -rocket -progress
+[2022.06.12-03.39.43:162][933]Discovering modules, targets and source code for project...
+[2022.06.12-03.39.48:794][933]Binding IntelliSense data...
+[2022.06.12-03.39.56:961][933]Binding IntelliSense data... 100%
+[2022.06.12-03.39.56:962][933]Writing project files...
+[2022.06.12-03.40.01:796][933]Writing project files... 100%
+[2022.06.12-03.40.01:987][933]Candidate modules for hot reload:
+[2022.06.12-03.40.01:987][933]  Tantrumn
+[2022.06.12-03.40.01:987][933]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tantrumn,6625 TantrumnEditor Win64 Development -Project="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Tantrumn.uproject" "D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Tantrumn.uproject"  -IgnoreJunk]
+[2022.06.12-03.40.32:630][933]CompilerResultsLog: New page: Compilation - Jun 11, 2022, 3:40:32 PM
+[2022.06.12-03.40.32:630][933]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\Tantrum-Final).
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Creating makefile for TantrumnEditor (no existing makefile)
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Parsing headers for TantrumnEditor
+[2022.06.12-03.40.32:631][933]CompilerResultsLog:   Running UnrealHeaderTool "D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Tantrumn.uproject" "D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\TantrumnEditor\Development\TantrumnEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\willi\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: LogInit: Display: Loading text-based GConfig....
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Reflection code generated for TantrumnEditor in 18.0540269 seconds
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Building TantrumnEditor...
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Using Visual Studio 2019 14.29.30143 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Temporary license has expired:
+[2022.06.12-03.40.32:631][933]CompilerResultsLog:     Your Agent's temporary license has expired. IncrediBuild will allow you to utilize up to 8 cores on your local machine.
+[2022.06.12-03.40.32:631][933]CompilerResultsLog:      To unleash IncrediBuild's capabilities to utilize idle cores in your network in order to achieve increased performance, please contact sales@incredibuild.com
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: 
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: Tantrumn.init.gen.cpp (0:06.43 at +0:00)
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: TantrumnAIController.cpp (0:06.73 at +0:00)
+[2022.06.12-03.40.32:631][933]CompilerResultsLog: TantrumnAIController.gen.cpp (0:06.71 at +0:00)
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: UE4Editor-Tantrumn-6625.lib (0:00.34 at +0:06)
+[2022.06.12-03.40.32:632][933]CompilerResultsLog:    Creating library D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-6625.lib and object D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-6625.exp
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: UE4Editor-Tantrumn-6625.dll (0:01.07 at +0:06)
+[2022.06.12-03.40.32:632][933]CompilerResultsLog:    Creating library D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-6625.suppressed.lib and object D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-6625.suppressed.exp
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: TantrumnEditor.target (0:00.56 at +0:07)
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: 
+[2022.06.12-03.40.32:632][933]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: 
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: 1 build system warning(s):
+[2022.06.12-03.40.32:632][933]CompilerResultsLog:    - Temporary license has expired
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: 
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: Total time in XGE executor: 9.03 seconds
+[2022.06.12-03.40.32:632][933]CompilerResultsLog: Total execution time: 30.54 seconds
+[2022.06.12-03.40.32:633][933]LogMainFrame: MainFrame: Module compiling took 30.653 seconds
+[2022.06.12-03.40.32:737][933]LogClass: Could not find existing class TantrumnAIController in package /Script/Tantrumn for HotReload, assuming new class
+[2022.06.12-03.40.32:757][933]LogClass: EEffectType HotReload.
+[2022.06.12-03.40.32:757][933]LogClass: ECharacterThrowState HotReload.
+[2022.06.12-03.40.32:757][933]LogClass: EGameState HotReload.
+[2022.06.12-03.40.32:757][933]LogClass: EPlayerGameState HotReload.
+[2022.06.12-03.40.32:757][933]LogClass: GameResult HotReload.
+[2022.06.12-03.40.32:774][933]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tantrumn' in 0.0004 seconds. Added 12 classes and 2 folders.
+[2022.06.12-03.40.32:787][933]LogPython: Warning: 'GameState' and 'EGameState' have the same name (GameState) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2022.06.12-03.40.32:797][933]Display: HotReload successful (49 functions remapped  1 scriptstructs remapped)
+[2022.06.12-03.40.32:942][933]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0205 seconds. Added 3834 classes and 930 folders.
+[2022.06.12-03.40.32:963][933]Display: HotReload took 31.0s.
+[2022.06.12-03.40.32:968][933]Warning: HotReload operation took 31.0s.
+[2022.06.12-03.40.34:177][933]LogVSAccessor: Warning: Couldn't goto line number '1' in 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Source/Tantrumn/TantrumnAIController.cpp'
+[2022.06.12-03.40.34:201][933]LogSlate: Window 'Add C++ Class' being destroyed
+[2022.06.12-03.40.34:880][934]LogHotReload: New module detected: UE4Editor-Tantrumn-6625.dll
+[2022.06.12-03.40.34:950][935]LogHotReload: Starting Hot-Reload from IDE
+[2022.06.12-03.40.34:987][935]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tantrumn' in 0.0006 seconds. Added 12 classes and 2 folders.
+[2022.06.12-03.40.34:991][935]LogPython: Warning: 'GameState' and 'EGameState' have the same name (GameState) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2022.06.12-03.40.34:997][935]Display: HotReload successful (0 functions remapped  1 scriptstructs remapped)
+[2022.06.12-03.40.35:016][935]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0179 seconds. Added 3834 classes and 930 folders.
+[2022.06.12-03.40.35:034][935]Display: HotReload took  0.1s.
+[2022.06.12-03.41.04:763][102]Candidate modules for hot reload:
+[2022.06.12-03.41.04:763][102]  Tantrumn
+[2022.06.12-03.41.04:764][102]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tantrumn,4018 TantrumnEditor Win64 Development -Project="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Tantrumn.uproject" "D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Tantrumn.uproject"  -IgnoreJunk]
+[2022.06.12-03.41.04:769][102]Warning: Starting HotReload took  0.3s.
+[2022.06.12-03.41.10:731][362]CompilerResultsLog: New page: Compilation - Jun 11, 2022, 3:41:10 PM
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\Tantrum-Final).
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: Building TantrumnEditor...
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: Using Visual Studio 2019 14.29.30143 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: Distributing 3 actions to XGE
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: Temporary license has expired:
+[2022.06.12-03.41.10:732][362]CompilerResultsLog:     Your Agent's temporary license has expired. IncrediBuild will allow you to utilize up to 8 cores on your local machine.
+[2022.06.12-03.41.10:732][362]CompilerResultsLog:      To unleash IncrediBuild's capabilities to utilize idle cores in your network in order to achieve increased performance, please contact sales@incredibuild.com
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: 
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.12-03.41.10:732][362]CompilerResultsLog: UE4Editor-Tantrumn-4018.lib (0:00.31 at +0:00)
+[2022.06.12-03.41.10:732][362]CompilerResultsLog:    Creating library D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-4018.lib and object D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-4018.exp
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: UE4Editor-Tantrumn-4018.dll (0:02.32 at +0:00)
+[2022.06.12-03.41.10:733][362]CompilerResultsLog:    Creating library D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-4018.suppressed.lib and object D:\Unreal Projects\Tantrum-Final\Tantrumn-Week 10\Intermediate\Build\Win64\UE4Editor\Development\Tantrumn\UE4Editor-Tantrumn-4018.suppressed.exp
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: TantrumnEditor.target (0:00.62 at +0:02)
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: 
+[2022.06.12-03.41.10:733][362]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: 
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: 1 build system warning(s):
+[2022.06.12-03.41.10:733][362]CompilerResultsLog:    - Temporary license has expired
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: 
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: Total time in XGE executor: 3.38 seconds
+[2022.06.12-03.41.10:733][362]CompilerResultsLog: Total execution time: 5.75 seconds
+[2022.06.12-03.41.10:733][362]LogMainFrame: MainFrame: Module compiling took 6.002 seconds
+[2022.06.12-03.41.10:889][362]LogClass: EEffectType HotReload.
+[2022.06.12-03.41.10:889][362]LogClass: ECharacterThrowState HotReload.
+[2022.06.12-03.41.10:889][362]LogClass: EGameState HotReload.
+[2022.06.12-03.41.10:889][362]LogClass: EPlayerGameState HotReload.
+[2022.06.12-03.41.10:889][362]LogClass: GameResult HotReload.
+[2022.06.12-03.41.10:909][362]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tantrumn' in 0.0006 seconds. Added 12 classes and 2 folders.
+[2022.06.12-03.41.10:915][362]LogPython: Warning: 'GameState' and 'EGameState' have the same name (GameState) when exposed to Python. Rename one of them using 'ScriptName' meta-data.
+[2022.06.12-03.41.10:927][362]Display: HotReload successful (49 functions remapped  1 scriptstructs remapped)
+[2022.06.12-03.41.11:130][362]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0255 seconds. Added 3834 classes and 930 folders.
+[2022.06.12-03.41.11:139][362]Display: HotReload took  6.7s.
+[2022.06.12-03.45.31:595][971]LogEditorClassViewer: Warning: Class /Engine/Tutorial/InWorldBlueprintEditing/TutorialAssets/IWBE_Blutility.IWBE_Blutility_C has parent /Script/Blutility.PlacedEditorUtilityBase, but this parent is not found. The Class will not be shown in ClassViewer.
+[2022.06.12-03.45.31:599][971]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2022.06.12-03.45.56:529][971]LogSlate: Window 'Pick Parent Class' being destroyed
+[2022.06.12-03.45.56:536][971]LogContentBrowser: Deferred new asset file creation: NewBlueprint
+[2022.06.12-03.45.56:558][971]LogContentBrowser: Creating deferred item: NewBlueprint
+[2022.06.12-03.46.25:053][537]LogContentBrowser: Attempting asset rename: NewBlueprint -> BP_TantrumnAIController
+[2022.06.12-03.46.25:076][537]LogContentBrowser: End creating deferred item NewBlueprint
+[2022.06.12-03.46.26:899][682]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Tantrumn/Blueprints/Controllers/BP_TantrumnAIController.BP_TantrumnAIController
+[2022.06.12-03.46.27:527][683]LogRenderer: Reallocating scene render targets to support 1300x704 Format 10 NumSamples 1 (Frame:1).
+[2022.06.12-03.46.42:605][649]LogUObjectHash: Compacting FUObjectHashTables data took  12.57ms
+[2022.06.12-03.46.42:635][649]LogSavePackage: Moving 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Saved/Playground_KinematicsLocalMPF92FDA3D43601F94652628B5DDE8831D.tmp' to 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Maps/Playground_KinematicsLocalMP.umap'
+[2022.06.12-03.46.42:666][649]AssetCheck: New page: Asset Save: Playground_KinematicsLocalMP
+[2022.06.12-03.46.42:666][649]LogContentValidation: Display: Validating World /Game/Tantrumn/Maps/Playground_KinematicsLocalMP.Playground_KinematicsLocalMP
+[2022.06.12-03.48.04:266][267]LogSavePackage: Moving 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Saved/BP_TantrumnAIControllerE55FBE4442517BBD7720D98BFC3575BA.tmp' to 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/Controllers/BP_TantrumnAIController.uasset'
+[2022.06.12-03.48.04:292][267]AssetCheck: New page: Asset Save: BP_TantrumnAIController
+[2022.06.12-03.48.04:292][267]LogContentValidation: Display: Validating Blueprint /Game/Tantrumn/Blueprints/Controllers/BP_TantrumnAIController.BP_TantrumnAIController

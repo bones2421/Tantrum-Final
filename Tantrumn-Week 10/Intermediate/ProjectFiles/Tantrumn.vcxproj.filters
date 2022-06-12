@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tantrumn.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5ECBA7FE-20C1-4A11-8204-D11CB5474262}</UniqueIdentifier>
+      <UniqueIdentifier>{FEEE4117-0E1A-408A-8828-161826A2422D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tantrumn.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\LaunchMap.bat" />
     <None Include="..\..\LaunchServer.bat" />
     <Filter Include="Config">
-      <UniqueIdentifier>{1612045A-14E6-4E99-ADFA-0E432BA58A1C}</UniqueIdentifier>
+      <UniqueIdentifier>{5D3D586F-CA1D-4314-B1F4-6C7E6ACE4253}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tantrumn">
-      <UniqueIdentifier>{0D3D7923-949B-44D0-90A9-7E13B1D934E7}</UniqueIdentifier>
+      <UniqueIdentifier>{218760DB-75C8-4F29-AE18-F4C062DADE7B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tantrumn\InteractInterface.cpp">
       <Filter>Source\Tantrumn</Filter>
@@ -46,6 +46,12 @@
       <Filter>Source\Tantrumn</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Tantrumn\Tantrumn.h">
+      <Filter>Source\Tantrumn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tantrumn\TantrumnAIController.cpp">
+      <Filter>Source\Tantrumn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tantrumn\TantrumnAIController.h">
       <Filter>Source\Tantrumn</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Tantrumn\TantrumnCharacterBase.cpp">
