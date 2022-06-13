@@ -1058,3 +1058,8 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.13-04.25.55:970][336]LogSavePackage: Moving 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Saved/BP_TantrumnAIControllerFA71D4B54953FB997ABAB4BC74105336.tmp' to 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/Controllers/BP_TantrumnAIController.uasset'
 [2022.06.13-04.25.55:987][336]AssetCheck: New page: Asset Save: BP_TantrumnAIController
 [2022.06.13-04.25.55:987][336]LogContentValidation: Display: Validating Blueprint /Game/Tantrumn/Blueprints/Controllers/BP_TantrumnAIController.BP_TantrumnAIController
+[2022.06.13-04.31.35:974][789]LogUObjectHash: Compacting FUObjectHashTables data took   7.14ms
+[2022.06.13-04.31.36:002][789]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Tantrumn/Blueprints/AI/BB_TantrumnBase" FILE="D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/AI/BB_TantrumnBase.uasset" SILENT=true
+[2022.06.13-04.31.36:005][789]LogSavePackage: Moving 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Saved/BB_TantrumnBase4F223C9A497FD630ADF2BA90BD633C6C.tmp' to 'D:/Unreal Projects/Tantrum-Final/Tantrumn-Week 10/Content/Tantrumn/Blueprints/AI/BB_TantrumnBase.uasset'
+[2022.06.13-04.31.36:024][789]AssetCheck: New page: Asset Save: BB_TantrumnBase
+[2022.06.13-04.31.36:024][789]LogContentValidation: Display: Validating BlackboardData /Game/Tantrumn/Blueprints/AI/BB_TantrumnBase.BB_TantrumnBase
