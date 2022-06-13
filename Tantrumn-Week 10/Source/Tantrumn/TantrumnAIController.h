@@ -13,5 +13,11 @@ UCLASS()
 class TANTRUMN_API ATantrumnAIController : public AAIController
 {
 	GENERATED_BODY()
-	
+public:
+
+	virtual void OnPossess(APawn* InPawn) override;
+	virtual void OnUnPossess() override;
+
+	UFUNCTION()
+	void OnReachedEnd();
 };
