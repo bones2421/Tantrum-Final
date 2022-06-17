@@ -18,8 +18,42 @@ void EmptyLinkFunctionForGeneratedCodeTantrumnAIController() {}
 	AIMODULE_API UClass* Z_Construct_UClass_AAIController();
 	UPackage* Z_Construct_UPackage__Script_Tantrumn();
 // End Cross Module References
+	DEFINE_FUNCTION(ATantrumnAIController::execOnReachedEnd)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnReachedEnd();
+		P_NATIVE_END;
+	}
 	void ATantrumnAIController::StaticRegisterNativesATantrumnAIController()
 	{
+		UClass* Class = ATantrumnAIController::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnReachedEnd", &ATantrumnAIController::execOnReachedEnd },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TantrumnAIController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATantrumnAIController, nullptr, "OnReachedEnd", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ATantrumnAIController_NoRegister()
 	{
@@ -28,6 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeTantrumnAIController() {}
 	struct Z_Construct_UClass_ATantrumnAIController_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -37,6 +72,9 @@ void EmptyLinkFunctionForGeneratedCodeTantrumnAIController() {}
 	UObject* (*const Z_Construct_UClass_ATantrumnAIController_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AAIController,
 		(UObject* (*)())Z_Construct_UPackage__Script_Tantrumn,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ATantrumnAIController_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATantrumnAIController_OnReachedEnd, "OnReachedEnd" }, // 36805029
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATantrumnAIController_Statics::Class_MetaDataParams[] = {
@@ -54,11 +92,11 @@ void EmptyLinkFunctionForGeneratedCodeTantrumnAIController() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x009002A4u,
@@ -73,7 +111,7 @@ void EmptyLinkFunctionForGeneratedCodeTantrumnAIController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATantrumnAIController, 3696802141);
+	IMPLEMENT_CLASS(ATantrumnAIController, 3990462723);
 	template<> TANTRUMN_API UClass* StaticClass<ATantrumnAIController>()
 	{
 		return ATantrumnAIController::StaticClass();

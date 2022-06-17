@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TANTRUMN_TantrumnAIController_generated_h
 
 #define Tantrumn_Week_10_Source_Tantrumn_TantrumnAIController_h_15_SPARSE_DATA
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnAIController_h_15_RPC_WRAPPERS
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnAIController_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnAIController_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnReachedEnd);
+
+
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnAIController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnReachedEnd);
+
+
 #define Tantrumn_Week_10_Source_Tantrumn_TantrumnAIController_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATantrumnAIController(); \
