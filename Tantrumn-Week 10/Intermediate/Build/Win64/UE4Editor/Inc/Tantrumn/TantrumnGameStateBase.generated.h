@@ -14,15 +14,15 @@ enum class EGameState : uint8;
 #endif
 #define TANTRUMN_TantrumnGameStateBase_generated_h
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_25_GENERATED_BODY \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_26_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGameResult_Statics; \
 	TANTRUMN_API static class UScriptStruct* StaticStruct();
 
 
 template<> TANTRUMN_API UScriptStruct* StaticStruct<struct FGameResult>();
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_SPARSE_DATA
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_RPC_WRAPPERS \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_SPARSE_DATA
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnRep_GameState); \
 	DECLARE_FUNCTION(execClearResults); \
@@ -31,7 +31,7 @@ template<> TANTRUMN_API UScriptStruct* StaticStruct<struct FGameResult>();
 	DECLARE_FUNCTION(execSetGameState);
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnRep_GameState); \
 	DECLARE_FUNCTION(execClearResults); \
@@ -40,7 +40,7 @@ template<> TANTRUMN_API UScriptStruct* StaticStruct<struct FGameResult>();
 	DECLARE_FUNCTION(execSetGameState);
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_INCLASS_NO_PURE_DECLS \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATantrumnGameStateBase(); \
 	friend struct Z_Construct_UClass_ATantrumnGameStateBase_Statics; \
@@ -57,7 +57,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_INCLASS \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_INCLASS \
 private: \
 	static void StaticRegisterNativesATantrumnGameStateBase(); \
 	friend struct Z_Construct_UClass_ATantrumnGameStateBase_Statics; \
@@ -74,7 +74,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_STANDARD_CONSTRUCTORS \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATantrumnGameStateBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATantrumnGameStateBase) \
@@ -87,7 +87,7 @@ private: \
 public:
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_ENHANCED_CONSTRUCTORS \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATantrumnGameStateBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -100,32 +100,32 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATantrumnGameStateBase)
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_PRIVATE_PROPERTY_OFFSET \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__GameState() { return STRUCT_OFFSET(ATantrumnGameStateBase, GameState); } \
 	FORCEINLINE static uint32 __PPO__Results() { return STRUCT_OFFSET(ATantrumnGameStateBase, Results); }
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_34_PROLOG
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_GENERATED_BODY_LEGACY \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_35_PROLOG
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_PRIVATE_PROPERTY_OFFSET \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_SPARSE_DATA \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_RPC_WRAPPERS \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_INCLASS \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_STANDARD_CONSTRUCTORS \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_PRIVATE_PROPERTY_OFFSET \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_SPARSE_DATA \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_RPC_WRAPPERS \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_INCLASS \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_GENERATED_BODY \
+#define Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_PRIVATE_PROPERTY_OFFSET \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_SPARSE_DATA \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_INCLASS_NO_PURE_DECLS \
-	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_37_ENHANCED_CONSTRUCTORS \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_PRIVATE_PROPERTY_OFFSET \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_SPARSE_DATA \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_INCLASS_NO_PURE_DECLS \
+	Tantrumn_Week_10_Source_Tantrumn_TantrumnGameStateBase_h_38_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

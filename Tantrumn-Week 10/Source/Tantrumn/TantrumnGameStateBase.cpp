@@ -7,17 +7,37 @@
 #include "TantrumnPlayerController.h"
 #include "TantrumnPlayerState.h"
 #include "GameFramework/CharacterMovementComponent.h"
-//only ever called by the authority
+#include "TantrumnAIController.h"
+
+void ATantrumnGameStateBase::UpdateResults(ATantrumnPlayerState* PlayerState, ATantrumnCharacterBase* TantrumnCharacter)
+{
+	if (!PlayerState || !TantrumnCharacter)
+	{
+		return;
+	}
+
+	const bool IsWinner = Results.Num() == 0;
+	PlayerState->SetIsWinner(IsWinner);
+	//ensureAlwaysMsgf(IsWinner, TEXT("ATantrumnCharacterBase::OnMontageEnded Winner Logic Broken"));
+	PlayerState->SetCurrentState(EPlayerGameState::Finished);
+
+	FGameResult Result;
+	Result.Name = TantrumnCharacter->GetName();
+	//TODO get actual time to post results to results widget
+	Result.Time = 5.0f;
+	Results.Add(Result);
+}
+
 void ATantrumnGameStateBase::OnPlayerReachedEnd(ATantrumnCharacterBase* TantrumnCharacter)
 {
 	ensureMsgf(HasAuthority(), TEXT("ATantrumnGameStateBase::OnPlayerReachedEnd being called from Non Authority!"));
 	if (ATantrumnPlayerController* TantrumnPlayerController = TantrumnCharacter->GetController<ATantrumnPlayerController>())
 	{
-		
 		TantrumnPlayerController->ClientReachedEnd();
 		TantrumnCharacter->GetCharacterMovement()->DisableMovement();
 
 		ATantrumnPlayerState* PlayerState = TantrumnPlayerController->GetPlayerState<ATantrumnPlayerState>();
+		UpdateResults(PlayerState, TantrumnCharacter);
 		if (PlayerState)
 		{
 			const bool IsWinner = Results.Num() == 0;
@@ -36,6 +56,12 @@ void ATantrumnGameStateBase::OnPlayerReachedEnd(ATantrumnCharacterBase* Tantrumn
 		{
 			GameState = EGameState::GameOver;
 		}
+	}
+	else if (ATantrumnAIController* TantrumnAIController = TantrumnCharacter->GetController<ATantrumnAIController>())
+	{
+		ATantrumnPlayerState* PlayerState = TantrumnAIController->GetPlayerState<ATantrumnPlayerState>();
+		UpdateResults(PlayerState, TantrumnCharacter);
+		TantrumnAIController->OnReachedEnd();
 	}
 }
 

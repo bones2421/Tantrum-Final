@@ -18,6 +18,7 @@ enum class EGameState : uint8
 };
 
 class ATantrumnCharacterBase;
+class ATantrumnPlayerState;
 
 USTRUCT()
 struct FGameResult
@@ -38,7 +39,8 @@ class TANTRUMN_API ATantrumnGameStateBase : public AGameStateBase
 public:
 
 	UFUNCTION(BlueprintCallable)
-	void SetGameState(EGameState InGameState) { GameState = InGameState; }
+	void SetGameState(EGameState InGameState) { GameState = InGameState;
+	}
 
 	UFUNCTION(BlueprintPure)
 	EGameState GetGameState() const { return GameState; }
@@ -48,6 +50,8 @@ public:
 
 	//this will only be called on authority
 	void OnPlayerReachedEnd(ATantrumnCharacterBase* TantrumnCharacter);
+	void UpdateResults(ATantrumnPlayerState* PlayerState, ATantrumnCharacterBase* TantrumnCharacter);
+
 
 	UFUNCTION()
 	void ClearResults();
