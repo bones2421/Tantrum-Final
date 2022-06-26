@@ -10,7 +10,6 @@
 
 class AController;
 class ATantrumnPlayerController;
-
 UCLASS()
 class TANTRUMN_API ATantrumnGameModeBase : public AGameModeBase
 {
@@ -25,7 +24,6 @@ public:
 	virtual void RestartPlayer(AController* NewPlayer) override;
 
 	void RestartGame();
-	void TantrumnAIController();
 private:
 
 	// --- VARS --- //

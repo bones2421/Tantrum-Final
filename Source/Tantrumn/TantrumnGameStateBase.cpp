@@ -23,34 +23,23 @@ void ATantrumnGameStateBase::UpdateResults(ATantrumnPlayerState* PlayerState, AT
 
 	FGameResult Result;
 	Result.Name = TantrumnCharacter->GetName();
-	//TODO get actual time to post results to results widget
+	//TODO get the actual time it took in order to post to a leaderboard/results widget
 	Result.Time = 5.0f;
 	Results.Add(Result);
 }
 
+//only ever called by the authority
 void ATantrumnGameStateBase::OnPlayerReachedEnd(ATantrumnCharacterBase* TantrumnCharacter)
 {
 	ensureMsgf(HasAuthority(), TEXT("ATantrumnGameStateBase::OnPlayerReachedEnd being called from Non Authority!"));
 
+	//two cases, Player or AI reaches the end
 	if (ATantrumnPlayerController* TantrumnPlayerController = TantrumnCharacter->GetController<ATantrumnPlayerController>())
 	{
 		TantrumnPlayerController->ClientReachedEnd();
 		TantrumnCharacter->GetCharacterMovement()->DisableMovement();
 		ATantrumnPlayerState* PlayerState = TantrumnPlayerController->GetPlayerState<ATantrumnPlayerState>();
 		UpdateResults(PlayerState, TantrumnCharacter);
-
-		if (PlayerState)
-		{
-			const bool IsWinner = Results.Num() == 0;
-			PlayerState->SetIsWinner(IsWinner);
-			PlayerState->SetCurrentState(EPlayerGameState::Finished);
-		}
-
-		FGameResult Result;
-		Result.Name = TantrumnCharacter->GetName();
-		//TODO get the actual time it took in order to post to a leaderboard/results widget
-		Result.Time = 5.0f;
-		Results.Add(Result);
 
 		//TODO this will not work once JIP(Join In Progress) is enabled
 		if (Results.Num() >= PlayerArray.Num())
@@ -64,6 +53,7 @@ void ATantrumnGameStateBase::OnPlayerReachedEnd(ATantrumnCharacterBase* Tantrumn
 		UpdateResults(PlayerState, TantrumnCharacter);
 		TantrumnAIController->OnReachedEnd();
 	}
+
 }
 
 void ATantrumnGameStateBase::ClearResults()
@@ -76,7 +66,7 @@ void ATantrumnGameStateBase::GetLifetimeReplicatedProps(TArray< FLifetimePropert
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	FDoRepLifetimeParams SharedParams;
-	SharedParams.bIsPushBased = true;
+	//SharedParams.bIsPushBased = true;
 	//SharedParams.Condition = COND_SkipOwner;
 
 	DOREPLIFETIME_WITH_PARAMS_FAST(ATantrumnGameStateBase, GameState, SharedParams);

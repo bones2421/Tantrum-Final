@@ -284,6 +284,34 @@ void ATantrumnCharacterBase::RequestPullObject()
 	}
 }
 
+bool ATantrumnCharacterBase::AttemptPullObjectAtLocation(const FVector& InLocation)
+{
+	if (CharacterThrowState != ECharacterThrowState::None && CharacterThrowState != ECharacterThrowState::RequestingPull)
+	{
+		return false;
+	}
+
+	FVector StartPos = GetActorLocation();
+	FVector EndPos = InLocation;
+	FHitResult HitResult;
+	GetWorld() ? GetWorld()->LineTraceSingleByChannel(HitResult, StartPos, EndPos, ECollisionChannel::ECC_Visibility) : false;
+#if ENABLE_DRAW_DEBUG
+	if (CVarDisplayTrace->GetBool())
+	{
+		DrawDebugLine(GetWorld(), StartPos, EndPos, HitResult.bBlockingHit ? FColor::Red : FColor::White, false);
+	}
+#endif
+	CharacterThrowState = ECharacterThrowState::RequestingPull;
+	ProcessTraceResult(HitResult,false);
+	if (CharacterThrowState == ECharacterThrowState::Pulling)
+	{
+		return true;
+	}
+
+	CharacterThrowState = ECharacterThrowState::None;
+	return false;
+}
+
 void ATantrumnCharacterBase::RequestStopPullObject()
 {
 	//if was pulling an object, drop it
@@ -470,7 +498,7 @@ void ATantrumnCharacterBase::LineCastActorTransform()
 	ProcessTraceResult(HitResult);
 }
 
-void ATantrumnCharacterBase::ProcessTraceResult(const FHitResult& HitResult)
+void ATantrumnCharacterBase::ProcessTraceResult(const FHitResult& HitResult, bool bHighlight /* = true */)
 {
 	//check if there was an existing throwable actor
 	//remove the hightlight to avoid wrong feedback 
@@ -495,7 +523,10 @@ void ATantrumnCharacterBase::ProcessTraceResult(const FHitResult& HitResult)
 	if (!IsSameActor)
 	{
 		ThrowableActor = HitThrowableActor;
-		ThrowableActor->ToggleHighlight(true);
+		if (bHighlight)
+		{
+			ThrowableActor->ToggleHighlight(true);
+		}
 	}
 
 	if (CharacterThrowState == ECharacterThrowState::RequestingPull)
@@ -504,9 +535,8 @@ void ATantrumnCharacterBase::ProcessTraceResult(const FHitResult& HitResult)
 		if (GetVelocity().SizeSquared() < 100.0f)
 		{
 			ServerPullObject(ThrowableActor);
-			//PullObject(ThrowableActor);
+			CharacterThrowState = ECharacterThrowState::Pulling;
 			ThrowableActor->ToggleHighlight(false);
-			//ThrowableActor = nullptr;
 		}
 	}
 }
@@ -549,6 +579,12 @@ bool ATantrumnCharacterBase::PlayCelebrateMontage()
 	if (bPlayedSuccessfully)
 	{
 		UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+
+		if (!BlendingOutDelegate.IsBound())
+		{
+			BlendingOutDelegate.BindUObject(this, &ATantrumnCharacterBase::OnMontageBlendingOut);
+		}
+		AnimInstance->Montage_SetBlendingOutDelegate(BlendingOutDelegate, CelebrateMontage);
 
 		if (!MontageEndedDelegate.IsBound())
 		{
@@ -595,7 +631,6 @@ void ATantrumnCharacterBase::UnbindMontage()
 
 void ATantrumnCharacterBase::OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted)
 {
-
 }
 
 void ATantrumnCharacterBase::OnMontageEnded(UAnimMontage* Montage, bool bInterrupted)
@@ -614,7 +649,7 @@ void ATantrumnCharacterBase::OnMontageEnded(UAnimMontage* Montage, bool bInterru
 			ThrowableActor = nullptr;
 		}
 	}
-	else if(Montage == CelebrateMontage)
+	else if (Montage == CelebrateMontage)
 	{
 		if (IsLocallyControlled())
 		{
@@ -624,21 +659,25 @@ void ATantrumnCharacterBase::OnMontageEnded(UAnimMontage* Montage, bool bInterru
 			{
 				ATantrumnPlayerController* TantrumnPlayerController = GetController<ATantrumnPlayerController>();
 				if (TantrumnPlayerController)
-				{ 
+				{
 					TantrumnGameInstance->DisplayLevelComplete(TantrumnPlayerController);
 				}
-					
+
 			}
 		}
-		
+
 		if (ATantrumnPlayerState* TantrumnPlayerState = GetPlayerState<ATantrumnPlayerState>())
 		{
 			if (TantrumnPlayerState->IsWinner())
 			{
-				PlayAnimMontage(CelebrateMontage, 1.0f, TEXT("Winner"));
+				float length = PlayAnimMontage(CelebrateMontage, 1.0f, TEXT("Winner"));
+				ensureAlwaysMsgf(length > 0.f, TEXT("ATantrumnCharacterBase::OnMontageEnded Could Not Player Winner Animation"));
+			}
+			else
+			{
+				//ensureAlwaysMsgf(false, TEXT("ATantrumnCharacterBase::OnMontageEnded Winner Logic Broken"));
 			}
 		}
-		
 	}
 }
 

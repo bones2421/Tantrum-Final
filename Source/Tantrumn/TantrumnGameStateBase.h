@@ -39,8 +39,7 @@ class TANTRUMN_API ATantrumnGameStateBase : public AGameStateBase
 public:
 
 	UFUNCTION(BlueprintCallable)
-	void SetGameState(EGameState InGameState) { GameState = InGameState;
-	}
+	void SetGameState(EGameState InGameState) { GameState = InGameState; }
 
 	UFUNCTION(BlueprintPure)
 	EGameState GetGameState() const { return GameState; }
@@ -50,13 +49,13 @@ public:
 
 	//this will only be called on authority
 	void OnPlayerReachedEnd(ATantrumnCharacterBase* TantrumnCharacter);
-	void UpdateResults(ATantrumnPlayerState* PlayerState, ATantrumnCharacterBase* TantrumnCharacter);
-
 
 	UFUNCTION()
 	void ClearResults();
 
 protected:
+	void UpdateResults(ATantrumnPlayerState* PlayerState, ATantrumnCharacterBase* TantrumnCharacter);
+
 	UPROPERTY(VisibleAnywhere, ReplicatedUsing = OnRep_GameState, Category = "States")
 	EGameState GameState = EGameState::None;
 

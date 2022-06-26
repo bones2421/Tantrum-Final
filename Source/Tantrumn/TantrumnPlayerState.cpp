@@ -10,7 +10,7 @@ void ATantrumnPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty 
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	FDoRepLifetimeParams SharedParams;
-	SharedParams.bIsPushBased = true;
+	//SharedParams.bIsPushBased = true;
 
 	DOREPLIFETIME_WITH_PARAMS_FAST(ATantrumnPlayerState, CurrentState, SharedParams);
 	DOREPLIFETIME_WITH_PARAMS_FAST(ATantrumnPlayerState, bIsWinner, SharedParams);

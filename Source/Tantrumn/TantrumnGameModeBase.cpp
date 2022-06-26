@@ -9,6 +9,7 @@
 #include "TantrumnGameStateBase.h"
 #include "TantrumnPlayerController.h"
 #include "TantrumnPlayerState.h"
+#include "TantrumnAIController.h"
 
 ATantrumnGameModeBase::ATantrumnGameModeBase()
 {
@@ -22,7 +23,6 @@ void ATantrumnGameModeBase::BeginPlay()
 	{
 		TantrumnGameState->SetGameState(EGameState::Waiting);
 	}
-	
 }
 
 void ATantrumnGameModeBase::AttemptStartGame()
@@ -47,7 +47,7 @@ void ATantrumnGameModeBase::AttemptStartGame()
 		
 	}
 }
-//this needs to be done on the game instance...
+
 void ATantrumnGameModeBase::DisplayCountdown()
 {
 	for (FConstPlayerControllerIterator Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
@@ -62,7 +62,7 @@ void ATantrumnGameModeBase::DisplayCountdown()
 		}
 	}
 }
-
+//broadcast this?
 void ATantrumnGameModeBase::StartGame()
 {
 	if (ATantrumnGameStateBase* TantrumnGameState = GetGameState<ATantrumnGameStateBase>())
@@ -90,6 +90,21 @@ void ATantrumnGameModeBase::StartGame()
 			}
 		}
 	}
+
+	for (FConstControllerIterator Iterator = GetWorld()->GetControllerIterator(); Iterator; ++Iterator)
+	{
+		ATantrumnAIController* TantrumnAIController = Cast<ATantrumnAIController>(Iterator->Get());
+		if (TantrumnAIController)
+		{
+			ATantrumnPlayerState* PlayerState = TantrumnAIController->GetPlayerState<ATantrumnPlayerState>();
+			if (PlayerState)
+			{
+				PlayerState->SetCurrentState(EPlayerGameState::Playing);
+				PlayerState->SetIsWinner(false);
+			}
+		}
+	}
+		
 }
 
 void ATantrumnGameModeBase::RestartPlayer(AController* NewPlayer)
@@ -114,17 +129,15 @@ void ATantrumnGameModeBase::RestartPlayer(AController* NewPlayer)
 
 void ATantrumnGameModeBase::RestartGame()
 {
-	//destroy actor
+	//destroy the actor
 	for (FConstControllerIterator Iterator = GetWorld()->GetControllerIterator(); Iterator; ++Iterator)
 	{
 		ATantrumnAIController* TantrumnAIController = Cast<ATantrumnAIController>(Iterator->Get());
-		if (TantrumAIController && TantrumnAIController->GetPawn())
+		if (TantrumnAIController && TantrumnAIController->GetPawn())
 		{
-			TantrumnAIController->Destory(true);
+			TantrumnAIController->Destroy(true);
 		}
 	}
-	
-	
 
 	ResetLevel();
 	//RestartGame();
@@ -135,7 +148,6 @@ void ATantrumnGameModeBase::RestartGame()
 		APlayerController* PlayerController = Iterator->Get();
 		if (PlayerController && PlayerController->PlayerState && !MustSpectate(PlayerController))
 		{
-			//call something to clean up the hud 
 			if (ATantrumnPlayerController* TantrumnPlayerController = Cast< ATantrumnPlayerController>(PlayerController))
 			{
 				TantrumnPlayerController->ClientRestartGame();
@@ -143,8 +155,4 @@ void ATantrumnGameModeBase::RestartGame()
 			RestartPlayer(PlayerController);
 		}
 	}
-}
-
-void ATantrumnGameModeBase::TantrumnAIController()
-{
 }
