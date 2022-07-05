@@ -11,6 +11,8 @@
 #include "TantrumnGameStateBase.h"
 #include "TantrumnPlayerState.h"
 
+
+
 static TAutoConsoleVariable<bool> CVarDisplayLaunchInputDelta(
 	TEXT("Tantrum.Character.Debug.DisplayLaunchInputDelta"),
 	false,
@@ -36,59 +38,63 @@ void ATantrumnPlayerController::OnUnPossess()
 	UE_LOG(LogTemp, Warning, TEXT("OnUnPossess: %s"), *GetName());
 }
 
-void ATantrumnPlayerController::ClientDisplayCountdown_Implementation(float GameCountdownDuration)
+void ATantrumnPlayerController::ClientDisplayCountdown_Implementation(float GameCountdownDuration, TSubclassOf<UTantrumnGameWidget> InGameWidgetClass)
 {
-	if (UTantrumnGameInstance* TantrumnGameInstance = GetWorld()->GetGameInstance<UTantrumnGameInstance>())
+	if (!TantrumnGameWidget)
 	{
-		TantrumnGameInstance->DisplayCountdown(GameCountdownDuration, this);
+		TantrumnGameWidget = CreateWidget<UTantrumnGameWidget>(this, InGameWidgetClass);
+	}
+
+	if (TantrumnGameWidget)
+	{
+		TantrumnGameWidget->AddToPlayerScreen();
+		TantrumnGameWidget->StartCountdown(GameCountdownDuration, this);
 	}
 }
 
 void ATantrumnPlayerController::ClientRestartGame_Implementation()
 {
-	if (ATantrumnPlayerState* TantrumnPlayerState = GetPlayerState<ATantrumnPlayerState>())
+	if (TantrumnGameWidget)
 	{
-		if (UTantrumnGameInstance* TantrumnGameInstance = GetWorld()->GetGameInstance<UTantrumnGameInstance>())
-		{
-			TantrumnGameInstance->RestartGame(this);
-		}
+		TantrumnGameWidget->RemoveResults();
+		//restore game input 
+		FInputModeGameOnly InputMode;
+		SetInputMode(InputMode);
+		SetShowMouseCursor(false);
 	}
 }
 
 void ATantrumnPlayerController::ClientReachedEnd_Implementation()
 {
-	//this needs to be named better, it's just displaying the end screen
-	//this will be seperate, as it will come after the montage...
-	//client gets hud authority needs to replicate the montage
-
 	if (ATantrumnCharacterBase* TantrumnCharacterBase = Cast<ATantrumnCharacterBase>(GetCharacter()))
 	{
 		TantrumnCharacterBase->ServerPlayCelebrateMontage();
 		TantrumnCharacterBase->GetCharacterMovement()->DisableMovement();
-	}
 
-	if (UTantrumnGameInstance* TantrumnGameInstance = GetWorld()->GetGameInstance<UTantrumnGameInstance>())
-	{
-		//call the level complete event for the widget...
-	}
+		FInputModeUIOnly InputMode;
+		SetInputMode(InputMode);
+		SetShowMouseCursor(true);
 
-	FInputModeUIOnly InputMode;
-	SetInputMode(InputMode);
-	SetShowMouseCursor(true);
+		if (TantrumnGameWidget)
+		{
+			TantrumnGameWidget->DisplayResults();
+		}
+	}
+}
+
+void ATantrumnPlayerController::OnRetrySelected()
+{
+	ServerRestartLevel();
 }
 
 void ATantrumnPlayerController::ServerRestartLevel_Implementation()
 {
-	//GetWorld()->ServerTravel(TEXT("?restart"));
 	ATantrumnGameModeBase* TantrumnGameMode = GetWorld()->GetAuthGameMode<ATantrumnGameModeBase>();
 	if (ensureMsgf(TantrumnGameMode, TEXT("ATantrumnPlayerController::ServerRestartLevel_Implementation Invalid GameMode")))
 	{
 		TantrumnGameMode->RestartGame();
 		
 	}
-	/*RestartPlayer()
-	GetWorld()->GetCurrentLevel()->GetName()
-	GetWorld()->ServerTravel(TEXT("?restart"));*/
 }
 
 void ATantrumnPlayerController::ReceivedPlayer()
@@ -123,8 +129,8 @@ void ATantrumnPlayerController::SetupInputComponent()
 		InputComponent->BindAction(TEXT("Sprint"), EInputEvent::IE_Pressed, this, &ATantrumnPlayerController::RequestSprintStart);
 		InputComponent->BindAction(TEXT("Sprint"), EInputEvent::IE_Released, this, &ATantrumnPlayerController::RequestSprintEnd);
 		
-		InputComponent->BindAction(TEXT("PullObject"), EInputEvent::IE_Pressed, this, &ATantrumnPlayerController::RequestPullObject);
-		InputComponent->BindAction(TEXT("PullObject"), EInputEvent::IE_Released, this, &ATantrumnPlayerController::RequestStopPullObject);
+		InputComponent->BindAction(TEXT("PullorAimObject"), EInputEvent::IE_Pressed, this, &ATantrumnPlayerController::RequestPullorAimObject);
+		InputComponent->BindAction(TEXT("PullorAimObject"), EInputEvent::IE_Released, this, &ATantrumnPlayerController::RequestStopPullorAimObject);
 
 		InputComponent->BindAxis(TEXT("MoveForward"), this, &ATantrumnPlayerController::RequestMoveForward);
 		InputComponent->BindAxis(TEXT("MoveRight"), this, &ATantrumnPlayerController::RequestMoveRight);
@@ -210,6 +216,8 @@ void ATantrumnPlayerController::RequestThrowObject(float AxisValue)
 				}
 			}
 			LastAxis = AxisValue;
+			//prevent the case where we hold the axis at the threshold and then release
+			//perhaps rolling average
 			const bool IsFlick = fabs(currentDelta) > FlickThreshold;
 			if (IsFlick)
 			{
@@ -230,7 +238,7 @@ void ATantrumnPlayerController::RequestThrowObject(float AxisValue)
 	}
 }
 
-void ATantrumnPlayerController::RequestPullObject()
+void ATantrumnPlayerController::RequestPullorAimObject()
 {
 	if (!CanProcessRequest())
 	{
@@ -239,15 +247,31 @@ void ATantrumnPlayerController::RequestPullObject()
 	
 	if (ATantrumnCharacterBase* TantrumnCharacterBase = Cast<ATantrumnCharacterBase>(GetCharacter()))
 	{
-		TantrumnCharacterBase->RequestPullObject();
+		if (TantrumnCharacterBase->CanAim())
+		{
+			TantrumnCharacterBase->RequestAim();
+		}
+		else
+		{
+			TantrumnCharacterBase->RequestPullObject();
+		}
+		
 	}
 }
 
-void ATantrumnPlayerController::RequestStopPullObject()
+void ATantrumnPlayerController::RequestStopPullorAimObject()
 {
 	if (ATantrumnCharacterBase* TantrumnCharacterBase = Cast<ATantrumnCharacterBase>(GetCharacter()))
 	{
-		TantrumnCharacterBase->RequestStopPullObject();
+		if (TantrumnCharacterBase->IsAiming())
+		{
+			TantrumnCharacterBase->RequestStopAim();
+		}
+		else
+		{
+			TantrumnCharacterBase->RequestStopPullObject();
+		}
+		
 	}
 }
 

@@ -18,7 +18,6 @@ void ATantrumnGameStateBase::UpdateResults(ATantrumnPlayerState* PlayerState, AT
 
 	const bool IsWinner = Results.Num() == 0;
 	PlayerState->SetIsWinner(IsWinner);
-	//ensureAlwaysMsgf(IsWinner, TEXT("ATantrumnCharacterBase::OnMontageEnded Winner Logic Broken"));
 	PlayerState->SetCurrentState(EPlayerGameState::Finished);
 
 	FGameResult Result;

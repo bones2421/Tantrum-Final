@@ -58,6 +58,15 @@ void AThrowableActor::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPri
 		{
 			I->Execute_ApplyEffect(Other, EffectType, false);
 		}
+
+		AActor* CurrentOwner = GetOwner();
+		if (CurrentOwner && CurrentOwner != Other)
+		{
+			if (ATantrumnCharacterBase* TantrumnCharacterBase = Cast<ATantrumnCharacterBase>(Other))
+			{
+				TantrumnCharacterBase->NotifyHitByThrowable(this);
+			}
+		}
 	}
 	
 	if (PullActor && State == EState::Pull )

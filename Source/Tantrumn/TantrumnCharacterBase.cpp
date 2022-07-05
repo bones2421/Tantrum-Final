@@ -12,6 +12,8 @@
 #include "TantrumnGameInstance.h"
 #include "TantrumnPlayerState.h"
 
+#include "VisualLogger/VisualLogger.h"
+
 constexpr int CVSphereCastPlayerView = 0;
 constexpr int CVSphereCastActorTransform = 1;
 constexpr int CVLineCastActorTransform = 2;
@@ -37,6 +39,8 @@ static TAutoConsoleVariable<bool> CVarDisplayThrowVelocity(
 	false,
 	TEXT("Display Throw Velocity"),
 	ECVF_Default);
+
+DEFINE_LOG_CATEGORY_STATIC(LogTantrumnChar, Verbose, Verbose)
 
 // Sets default values
 ATantrumnCharacterBase::ATantrumnCharacterBase()
@@ -250,6 +254,7 @@ void ATantrumnCharacterBase::RequestThrowObject()
 	}
 }
 
+
 bool ATantrumnCharacterBase::ServerRequestThrowObject_Validate()
 {
 	//can check the state or if the throwable actor exists etc to prevent this being broadcasted
@@ -271,6 +276,7 @@ void ATantrumnCharacterBase::MulticastRequestThrowObject_Implementation()
 	}
 
 	PlayThrowMontage();
+	//if we were aiming transition out of that camera
 	CharacterThrowState = ECharacterThrowState::Throwing;
 }
 
@@ -281,6 +287,15 @@ void ATantrumnCharacterBase::RequestPullObject()
 	{
 		CharacterThrowState = ECharacterThrowState::RequestingPull;
 		ServerRequestPullObject(true);
+	}
+}
+
+void ATantrumnCharacterBase::RequestAim()
+{
+	if (!bIsStunned && CharacterThrowState == ECharacterThrowState::Attached)
+	{
+		CharacterThrowState = ECharacterThrowState::Aiming;
+		ServerRequestToggleAim(true);
 	}
 }
 
@@ -321,6 +336,20 @@ void ATantrumnCharacterBase::RequestStopPullObject()
 		ServerRequestPullObject(false);
 		//ResetThrowableObject();
 	}
+}
+
+void ATantrumnCharacterBase::RequestStopAim()
+{
+	if (CharacterThrowState == ECharacterThrowState::Aiming)
+	{
+		CharacterThrowState = ECharacterThrowState::Attached;
+		ServerRequestToggleAim(false);
+	}
+}
+
+void ATantrumnCharacterBase::ServerRequestToggleAim_Implementation(bool IsAiming)
+{
+	CharacterThrowState = IsAiming ? ECharacterThrowState::Aiming : ECharacterThrowState::Attached;
 }
 
 void ATantrumnCharacterBase::ServerRequestPullObject_Implementation(bool bIsPulling)
@@ -365,6 +394,11 @@ void ATantrumnCharacterBase::ServerBeginThrow_Implementation()
 		const FVector& Start = GetMesh()->GetSocketLocation(TEXT("ObjectAttach"));
 		DrawDebugLine(GetWorld(), Start, Start + Direction, FColor::Red, false, 5.0f);
 	}
+
+	const FVector& Start = GetMesh()->GetSocketLocation(TEXT("ObjectAttach"));
+	UE_VLOG_ARROW(this, LogTantrumnChar, Verbose, Start, Start + Direction, FColor::Red, TEXT("Throw Direction"));
+
+
 }
 
 void ATantrumnCharacterBase::ServerFinishThrow_Implementation()
@@ -411,6 +445,11 @@ void ATantrumnCharacterBase::OnThrowableAttached(AThrowableActor* InThrowableAct
 	//InThrowableActor->ToggleHighlight(false);
 }
 
+//EXERCISE - REPLICATE STUN
+void ATantrumnCharacterBase::NotifyHitByThrowable(AThrowableActor* InThrowable)
+{
+	OnStunBegin(1.0f);
+}
 
 bool ATantrumnCharacterBase::IsHovering() const
 {
@@ -544,7 +583,8 @@ void ATantrumnCharacterBase::ProcessTraceResult(const FHitResult& HitResult, boo
 bool ATantrumnCharacterBase::PlayThrowMontage()
 {
 	const float PlayRate = 1.0f;
-	bool bPlayedSuccessfully = PlayAnimMontage(ThrowMontage, PlayRate ) > 0.f;
+	const FName StartSectionName = IsAiming() ? TEXT("AimStart") : TEXT("Default");
+	bool bPlayedSuccessfully = PlayAnimMontage(ThrowMontage, PlayRate, StartSectionName) > 0.f;
 	if (bPlayedSuccessfully)
 	{
 		UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
@@ -651,31 +691,12 @@ void ATantrumnCharacterBase::OnMontageEnded(UAnimMontage* Montage, bool bInterru
 	}
 	else if (Montage == CelebrateMontage)
 	{
-		if (IsLocallyControlled())
-		{
-			//this shouldn't be here...
-			//display hud, we don't want this for all, so we should broadcast and whoever is intereseted can listen...
-			if (UTantrumnGameInstance* TantrumnGameInstance = GetWorld()->GetGameInstance<UTantrumnGameInstance>())
-			{
-				ATantrumnPlayerController* TantrumnPlayerController = GetController<ATantrumnPlayerController>();
-				if (TantrumnPlayerController)
-				{
-					TantrumnGameInstance->DisplayLevelComplete(TantrumnPlayerController);
-				}
-
-			}
-		}
-
 		if (ATantrumnPlayerState* TantrumnPlayerState = GetPlayerState<ATantrumnPlayerState>())
 		{
 			if (TantrumnPlayerState->IsWinner())
 			{
 				float length = PlayAnimMontage(CelebrateMontage, 1.0f, TEXT("Winner"));
 				ensureAlwaysMsgf(length > 0.f, TEXT("ATantrumnCharacterBase::OnMontageEnded Could Not Player Winner Animation"));
-			}
-			else
-			{
-				//ensureAlwaysMsgf(false, TEXT("ATantrumnCharacterBase::OnMontageEnded Winner Logic Broken"));
 			}
 		}
 	}
@@ -710,7 +731,6 @@ void ATantrumnCharacterBase::OnStunBegin(float StunRatio)
 	{
 		RequestSprintEnd();
 	}
-	GetMesh();
 }
 
 void ATantrumnCharacterBase::UpdateStun(float DeltaTime)
@@ -718,7 +738,7 @@ void ATantrumnCharacterBase::UpdateStun(float DeltaTime)
 	if (bIsStunned)
 	{
 		CurrentStunTimer += DeltaTime;
-		bIsStunned = CurrentStunTimer > StunTime;
+		bIsStunned = CurrentStunTimer < StunTime;
 		//bIsStunned = (FApp::GetCurrentTime() - StunBeginTimestamp) < StunTime;
 		if (!bIsStunned)
 		{

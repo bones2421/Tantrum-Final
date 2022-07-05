@@ -72,5 +72,9 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+
+
 *.ini
-*.log
+*.xml
+.idea/.idea.Tantrumn/.idea/riderModule.iml

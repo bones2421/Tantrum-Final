@@ -27,6 +27,8 @@ public:
 private:
 
 	// --- VARS --- //
+	UPROPERTY(EditAnywhere, Category = "Widget")
+	TSubclassOf<UTantrumnGameWidget> GameWidgetClass; // Exposed class to check the type of widget to display
 
 	// Countdown before gameplay state begins. Exposed so we can easily change this in BP editor. 
 	UPROPERTY(EditAnywhere, Category = "Game Details")

@@ -11,6 +11,8 @@
 #include "TantrumnPlayerState.h"
 #include "TantrumnAIController.h"
 
+#include "TantrumnGameWidget.h"
+
 ATantrumnGameModeBase::ATantrumnGameModeBase()
 {
 	PrimaryActorTick.bCanEverTick = false;
@@ -50,6 +52,7 @@ void ATantrumnGameModeBase::AttemptStartGame()
 
 void ATantrumnGameModeBase::DisplayCountdown()
 {
+	//set the hud for the game instances here, and the controller can then do what it needs
 	for (FConstPlayerControllerIterator Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
 	{
 		APlayerController* PlayerController = Iterator->Get();
@@ -57,7 +60,7 @@ void ATantrumnGameModeBase::DisplayCountdown()
 		{
 			if (ATantrumnPlayerController* TantrumnPlayerController = Cast< ATantrumnPlayerController>(PlayerController))
 			{
-				TantrumnPlayerController->ClientDisplayCountdown(GameCountdownDuration);
+				TantrumnPlayerController->ClientDisplayCountdown(GameCountdownDuration, GameWidgetClass);
 			}
 		}
 	}

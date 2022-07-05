@@ -8,6 +8,7 @@
 #include "Sound/SoundCue.h"
 #include "TantrumnCharacterBase.generated.h"
 
+
 class AThrowableActor;
 
 UENUM(BlueprintType)
@@ -18,16 +19,20 @@ enum class ECharacterThrowState : uint8
 	Pulling			UMETA(DisplayName = "Pulling"),
 	Attached		UMETA(DisplayName = "Attached"),
 	Throwing		UMETA(DisplayName = "Throwing"),
+	Aiming			UMETA(DisplayName = "Aiming"),
 };
 
 UCLASS()
-class TANTRUMN_API ATantrumnCharacterBase : public ACharacter, public IInteractInterface
+class TANTRUMN_API ATantrumnCharacterBase 
+	: public ACharacter
+	, public IInteractInterface
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
 	ATantrumnCharacterBase();
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -44,15 +49,17 @@ public:
 
 	void RequestThrowObject();
 	void RequestPullObject();
+	void RequestAim();
 
 	void RequestStopPullObject();
+	void RequestStopAim();
 	void ResetThrowableObject();
 
 	void RequestUseObject();
 
 	void OnThrowableAttached(AThrowableActor* InThrowableActor);
-
-	bool CanThrowObject() const { return CharacterThrowState == ECharacterThrowState::Attached; }
+	//this can now be a mask/bitflag as both can be true
+	bool CanThrowObject() const { return CharacterThrowState == ECharacterThrowState::Attached || CharacterThrowState == ECharacterThrowState::Aiming; }
 
 	UFUNCTION(BlueprintPure)
 	bool IsPullingObject() const { return CharacterThrowState == ECharacterThrowState::RequestingPull || CharacterThrowState == ECharacterThrowState::Pulling; }
@@ -66,10 +73,19 @@ public:
 	bool IsThrowing() const { return CharacterThrowState == ECharacterThrowState::Throwing; }
 
 	UFUNCTION(BlueprintPure)
+	bool CanAim() const { return CharacterThrowState == ECharacterThrowState::Attached; }
+
+	UFUNCTION(BlueprintPure)
+	bool IsAiming() const { return CharacterThrowState == ECharacterThrowState::Aiming; }
+
+	UFUNCTION(BlueprintPure)
 	ECharacterThrowState GetCharacterThrowState() const { return CharacterThrowState; }
 
 	UFUNCTION(BlueprintPure)
 	bool IsStunned() const { return bIsStunned; }
+
+	UFUNCTION(BlueprintCallable)
+	void NotifyHitByThrowable(AThrowableActor* InThrowable);
 
 	UFUNCTION(BlueprintPure)
 	bool IsBeingRescued() const { return bIsBeingRescued; }
@@ -101,6 +117,9 @@ protected:
 
 	UFUNCTION(Server, Reliable)
 	void ServerRequestPullObject(bool bIsPulling);
+
+	UFUNCTION(Server, Reliable)
+	void ServerRequestToggleAim(bool IsAiming);
 
 	UFUNCTION(Server, Reliable, WithValidation)
 	void ServerRequestThrowObject();

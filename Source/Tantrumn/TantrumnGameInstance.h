@@ -14,30 +14,4 @@ UCLASS()
 class TANTRUMN_API UTantrumnGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
-public:
-	void DisplayCountdown(float GameCountdownDuration, ATantrumnPlayerController* TantrumnPlayerController);
-	void DisplayLevelComplete(ATantrumnPlayerController* TantrumnPlayerController);
-
-	UFUNCTION(BlueprintPure)
-	ATantrumnGameStateBase* GetGameState() const { return TantrumnGameStateBase; }
-
-	UFUNCTION(BlueprintCallable)
-	void OnRetrySelected(ATantrumnPlayerController* TantrumnPlayerController);
-
-	UFUNCTION()
-	void RestartGame(ATantrumnPlayerController* TantrumnPlayerController);
-protected:
-	UFUNCTION()
-	void OnGameStateSet(AGameStateBase* GameStateBase);
-
-private:
-	UPROPERTY(EditAnywhere, Category = "Widget")
-	TSubclassOf<UTantrumnGameWidget> GameWidgetClass; // Exposed class to check the type of widget to display
-
-	//only in splitscreen coop will there need to more than one entry in this map
-	UPROPERTY()
-	TMap<APlayerController*, UTantrumnGameWidget*> GameWidgets;
-
-	UPROPERTY()
-	ATantrumnGameStateBase* TantrumnGameStateBase;
 };

@@ -5,10 +5,14 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "Sound/SoundCue.h"
+
+#include "TantrumnGameWidget.h"
+
 #include "TantrumnPlayerController.generated.h"
 
 class ATantrumnCharacterBase;
 class ATantrumnGameStateBase;
+class UTantrumnGameWidget;
 class UUserWidget;
 
 UCLASS()
@@ -25,13 +29,16 @@ public:
     virtual void OnUnPossess() override;
 
     UFUNCTION(Client, Reliable)
-    void ClientDisplayCountdown(float GameCountdownDuration);
+    void ClientDisplayCountdown(float GameCountdownDuration, TSubclassOf<UTantrumnGameWidget> InGameWidgetClass);
 
     UFUNCTION(Client, Reliable)
     void ClientRestartGame();
 
     UFUNCTION(Client, Reliable)
     void ClientReachedEnd();
+
+    UFUNCTION(BlueprintCallable)
+    void OnRetrySelected();
 
     UFUNCTION(Server, Reliable)
     void ServerRestartLevel();
@@ -47,8 +54,8 @@ protected:
     void RequestLookRight(float AxisValue);
     void RequestThrowObject(float AxisValue);
 
-    void RequestPullObject();
-    void RequestStopPullObject();
+    void RequestPullorAimObject();
+    void RequestStopPullorAimObject();
 
     void RequestJump();
 	void RequestStopJump();
@@ -80,6 +87,9 @@ protected:
 
     UPROPERTY()
     ATantrumnGameStateBase* TantrumnGameState;
+
+    UPROPERTY()
+    UTantrumnGameWidget* TantrumnGameWidget = nullptr;
 
     //used to determine flick of axis
     //float LastDelta = 0.0f;
